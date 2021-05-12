@@ -1,50 +1,22 @@
 {
-    "name": "gewis/gewisweb",
-    "description": "GEWIS Website",
-    "license": "GPL-3.0",
-    "keywords": [
-        "website",
-        "gewis"
-    ],
-    "homepage": "https://gewis.nl/",
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/jszanto/gewisweb-test-data"
-        }
-    ],
-    "require": {
-        "php": ">=5.4",
-        "ext-gd": "^0.0.0",
-        "ext-exif": "^0.0.0",
-        "ext-imagick": "^3.1",
-        "zendframework/zendframework": "2.4.*",
-        "doctrine/doctrine-orm-module": "0.*",
-        "zendframework/zend-developer-tools": "~1.0.0",
-        "jszanto/gewisweb-test-data": "dev-master",
-        "twbs/bootstrap-sass": "^3.3",
-        "maglnet/magl-markdown":"^1.4",
-        "dino/dompdf-module": "0.2.0",
-        "firebase/php-jwt": "^5.0",
-        "paragonie/random_compat": "^2.0",
-        "monolog/monolog": "^1.23",
-        "league/glide-zend": "^1.0",
-        "nesbot/carbon": "^1.39",
-        "fortawesome/font-awesome": "dev-master",
-        "slowprog/composer-copy-file": "~0.3"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "SlowProg\\CopyFile\\ScriptHandler::copy"
-        ],
-        "post-update-cmd": [
-            "SlowProg\\CopyFile\\ScriptHandler::copy"
-        ]
-    },
-    "extra": {
-        "copy-file": {
-            "vendor/fortawesome/font-awesome/scss/": "public/scss/fontawesome/",
-            "vendor/fortawesome/font-awesome/webfonts/": "public/fonts/fontawesome/"
-        }
-    }
+	"name": "php-actions/example-phpunit",
+	"description": "Example project using php-actions/phpunit",
+
+	"require-dev": {
+		"ext-curl": "*",
+		"ext-dom": "*",
+		"ext-json": "*",
+		"ext-sqlite3": "*",
+		"phpunit/phpunit": "9.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"App\\Test\\": "test"
+		}
+	}
 }
